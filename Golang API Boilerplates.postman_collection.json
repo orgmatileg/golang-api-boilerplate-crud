@@ -1,0 +1,214 @@
+{
+	"info": {
+		"_postman_id": "22e76640-3af9-4903-8787-4f6411a5cc40",
+		"name": "Golang API Boilerplates",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Fruits",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Orange\",\n    \"color\": \"Orange\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/v1/fruits",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"fruits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/v1/fruits/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"fruits",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/v1/fruits?offset=100",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"fruits"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "mangg",
+									"disabled": true
+								},
+								{
+									"key": "order",
+									"value": "desc",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "offset",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update one by id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Pineapple\",\n    \"color\": \"Oranges\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/v1/fruits/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"fruits",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update photo by id",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/hakim/Downloads/2.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/v1/fruits/2/uploadImage",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"fruits",
+								"2",
+								"uploadImage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete one by id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/v1/fruits/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"fruits",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
